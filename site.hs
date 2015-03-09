@@ -1,6 +1,7 @@
 --------------------------------------------------------------------------------
 {-# LANGUAGE OverloadedStrings #-}
 import           Data.Monoid (mappend)
+import           Data.Monoid         (mconcat, (<>))
 import           Hakyll
 
 
@@ -25,6 +26,7 @@ main = hakyll $ do
         route $ setExtension "html"
         compile $ pandocCompiler
             >>= loadAndApplyTemplate "templates/post.html"    postCtx
+            >>= saveSnapshot "content"
             >>= loadAndApplyTemplate "templates/default.html" postCtx
             >>= relativizeUrls
 
@@ -59,8 +61,31 @@ main = hakyll $ do
 
     match "templates/*" $ compile templateCompiler
 
+    -- Render RSS feed
+    create ["rss.xml"] $ do
+        route idRoute
+        compile $ do
+            loadAllSnapshots "posts/*" "content"
+                >>= fmap (take 10) . recentFirst
+                >>= renderRss (feedConfiguration "All posts") feedCtx
+
 
 --------------------------------------------------------------------------------
+feedConfiguration :: String -> FeedConfiguration
+feedConfiguration title = FeedConfiguration
+    { feedTitle       = "deftly.net - " ++ title
+    , feedDescription = "Personal blog of Aaron Bieber"
+    , feedAuthorName  = "Aaron Bieber"
+    , feedAuthorEmail = "qbit@deftly.net"
+    , feedRoot        = "https://deftly.net"
+    }
+
+feedCtx :: Context String
+feedCtx = mconcat
+    [ bodyField "description"
+    , defaultContext
+    ]
+
 postCtx :: Context String
 postCtx =
     dateField "date" "%B %e, %Y" `mappend`
