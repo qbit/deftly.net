@@ -6,33 +6,35 @@ I recently picked up a copy of Joe Armstrong’s superb Programming Erlang book 
 
 Enter `chello.erl`! I created a slightly modified version of Joe’s example that uses some `io:format` to tell you what’s going on. Hope someone finds this useful.
 
-    -module (chello).
-    -export ([loop/0, rpc/2]).
+``` erlang
+-module (chello).
+-export ([loop/0, rpc/2]).
 
-    rpc(Pid, Request) ->
-        io:format("rpc[~p]  sending ~p to ~p~n", [self(), Request, Pid]),
-        Pid ! {self(), Request},
-        receive
-            Response ->
-                io:format("rpc[~p]  responding with : ~p~n", [self(), Response]),
-                {Pid,Response}
-        end.
-
-    loop() ->
+rpc(Pid, Request) ->
+    io:format("rpc[~p]  sending ~p to ~p~n", [self(), Request, Pid]),
+    Pid ! {self(), Request},
     receive
-        {From, {hello}} ->
-            io:format("loop[~p] received info from: ~p~n", [self(), From]),
-            From ! {self(), "Hello"},
-            loop();
-        {From, {goodbye}} ->
-            io:format("loop[~p] received info from: ~p~n", [self(), From]),
-            From ! {self(),"Goodbye"},
-            loop();
-        {From, Other} ->
-            io:format("loop[~p] received info from: ~p~n", [self, From]),
-            From ! {self(),{error, Other}},
-            loop()
-        end.
+        Response ->
+            io:format("rpc[~p]  responding with : ~p~n", [self(), Response]),
+            {Pid,Response}
+    end.
+
+loop() ->
+receive
+    {From, {hello}} ->
+        io:format("loop[~p] received info from: ~p~n", [self(), From]),
+        From ! {self(), "Hello"},
+        loop();
+    {From, {goodbye}} ->
+        io:format("loop[~p] received info from: ~p~n", [self(), From]),
+        From ! {self(),"Goodbye"},
+        loop();
+    {From, Other} ->
+        io:format("loop[~p] received info from: ~p~n", [self, From]),
+        From ! {self(),{error, Other}},
+        loop()
+    end.
+```
 
 Run from the erl shell with:
 
