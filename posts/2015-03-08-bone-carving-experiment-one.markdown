@@ -1,5 +1,6 @@
 ---
 title: Experiments in Bone Carving - part one
+description: Bone carving failure with a side of success!
 ---
 
 Beard Comb - first attempt!

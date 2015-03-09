@@ -52,4 +52,8 @@ div#lightbox {
     div#lightbox {
 	margin: 0px 0px 0px 155px
     }
+
+    div#attrib {
+	float: right;
+    }
 }

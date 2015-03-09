@@ -1,5 +1,6 @@
 ---
 title: Hey Kid, I'ma Interpreter!! Stop all the static interpreter referenci'n!
+description: Please stop using '/bin/bash'!
 ---
 
 If you have ever explicitly set the path of an interpreter at the top of a script.. This post is about you.

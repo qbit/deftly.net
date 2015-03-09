@@ -1,5 +1,6 @@
 ---
 title: Concurrent Hello with Erlang
+description: A concurrent Hello World with Erlang
 ---
 
 I recently picked up a copy of Joe Armstrong’s superb Programming Erlang book ( from the folks @ pragprog.com ). While reading the chapter on concurrent programming I was completely stumped by one of the examples. It basically creates a “server” and “client” and allows for message passing between the two. I found it very difficult to follow the passing of messages from a to b, and back.

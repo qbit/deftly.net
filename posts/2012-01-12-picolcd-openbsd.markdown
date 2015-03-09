@@ -1,5 +1,6 @@
 ---
 title: Using a picoLCD 256×64 on OpenBSD 4.7
+description: Bit of hacking to get the picoLCD working on OpenBSD
 ---
 
 The first thing you will notice if you connect your fancy picoLCD 256×64 to your OpenBSD box, is that it shows up as a Human Interface Device.

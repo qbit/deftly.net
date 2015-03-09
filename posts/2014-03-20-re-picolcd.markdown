@@ -1,5 +1,6 @@
 ---
 title: Revisiting the PicoLCD 256x64
+description: Officially added the code to make picoLCD work!
 ---
 
 ![OpenBSD Banner](/images/banner1.gif)
