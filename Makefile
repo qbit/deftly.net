@@ -7,7 +7,7 @@ all: sbuild
 
 buildep: build deploy
 
-deploy:
+deploy: sbuild
 	rsync -auvz $(LOCAL) $(REMOTE)
 
 sbuild:
