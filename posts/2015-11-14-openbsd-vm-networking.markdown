@@ -15,7 +15,7 @@ First thing, enable forwarding:
 
 Next we need to configure a [tap](http://www.openbsd.org/cgi-bin/man.cgi/OpenBSD-current/man4/tap.4?query=tap) interface at `tap0`.
 
-`cat /etc/hostname.tun0`:
+`cat /etc/hostname.tap0`:
 
     inet 10.10.10.1 255.255.255.0
     up
