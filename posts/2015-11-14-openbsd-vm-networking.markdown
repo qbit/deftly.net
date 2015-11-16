@@ -36,3 +36,5 @@ For a bit more automation, we can run `dhcpd` on the `tap0` interface:
     	option routers 10.10.10.1;
     	range 10.10.10.5 10.10.10.30;
     }
+
+Pretty nifty, and all of it is in base (on amd64 and i386)!!
