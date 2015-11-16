@@ -11,7 +11,7 @@ deploy: sbuild
 	rsync -auvz $(LOCAL) $(REMOTE)
 
 sbuild:
-	$(SITE) build
+	env HS_ENCODING=utf8 $(SITE) build
 build:
 	cabal build
 	cabal run site build
@@ -20,7 +20,7 @@ preview:
 	cabal run preview 
 
 watch:
-	$(SITE) watch
+	env HS_ENCODING=utf8 $(SITE) watch
 
 clean:
 	cabal run site clean
