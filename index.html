@@ -16,22 +16,27 @@ $partial("templates/post-list.html")$
 <p><b>snap</b> can be verified with <a href="http://www.openbsd.org/cgi-bin/man.cgi/OpenBSD-current/man1/signify.1?query=signify">signify(1)</a> by using the below public key:</p>
 <p>
 
-<h4>New pub key</h4>
+<h4>Pub key</h4>
 <code>
 untrusted comment: github.com/qbit/snap public key
-RWTKOAnI3kqGqY/1ungBemfzkDj4ImXuybf4sDZcCrNJywffIRDkK1qF
+RWQVGN6sUjQQA5uYpANGLLKQMAERZ43otLePFSVqNFGGtf/qBez7G1WU
 </code>
 
-<h4>Old pub key</h4>
-  <code>
-untrusted comment: github.com/qbit/snap public key
-RWQkqrbMjoywaLwJQf45TjtCLgtFPSEO7v/TBf01WRZjvl8NSy6rJ6Fe
-  </code>
-</p>
 <p>
   To verify <b>snap</b>:<br />
   <code>signify -C -p /etc/signify/snap.pub -x SHA256.sig snap</code><br />
 </p>
 <p>
   The above assumes that the public key listed above has been put in <i>/etc/signify/snap.pub</i>.
+</p>
+
+<h4>Old pub keys</h4>
+<code>
+untrusted comment: github.com/qbit/snap public key
+RWTKOAnI3kqGqY/1ungBemfzkDj4ImXuybf4sDZcCrNJywffIRDkK1qF
+</code>
+<code>
+untrusted comment: github.com/qbit/snap public key
+RWQkqrbMjoywaLwJQf45TjtCLgtFPSEO7v/TBf01WRZjvl8NSy6rJ6Fe
+</code>
 </p>
