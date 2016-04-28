@@ -37,6 +37,7 @@ main = hakyll $ do
             let archiveCtx =
                     listField "posts" postCtx (return posts) `mappend`
                     constField "title" "Archives"            `mappend`
+                    constField "description" ""            `mappend`
                     defaultContext
 
             makeItem ""
@@ -52,6 +53,7 @@ main = hakyll $ do
             let indexCtx =
                     listField "posts" postCtx (return posts) `mappend`
                     constField "title" "Home"                `mappend`
+                    constField "description" ""                `mappend`
                     defaultContext
 
             getResourceBody
