@@ -1,5 +1,6 @@
 ---
 title: About
+description: All about Aaron
 ---
 
 ![](http://www.gravatar.com/avatar/f52f6d73bc0ef7c3920b9bdeafb29182)
