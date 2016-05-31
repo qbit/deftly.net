@@ -49,7 +49,7 @@ one called `ip(8)` I am sure there are others I am forgetting... but I
 prefer to forget. I have moved onto greener pastures and the knowledge
 of these programs no longer serves me.
 
-Simply configuring a wireless network on Linux became a huge hastle:
+Simply configuring a wireless network on Linux became a huge hassle:
 
 - **User**: Which tool do I use to configure my wireless? `ifconfig`
 doesn't seem to be able to help me.
@@ -96,7 +96,7 @@ feeling. I was going to abandon Linux and use one of the BSDs full
 time. If something didn't work, I was going to fix it. If I didn't
 have an application I needed, I was going to port it. But I didn't
 know which BSD to choose. All of them had issues with at least one
-thing I needed, so all were candidates for addoption!
+thing I needed, so all were candidates for adoption!
 
 ### The Showdown
 
@@ -108,7 +108,7 @@ needed to be done.
 
 A few things were clear:
 
-1) If I found myself googling for information that the system shoud
+1) If I found myself googling for information that the system should
 have provided, that system was not the one for me.
 2) If the system had glaring UPI violations, it wasn't the system for me.
 3) If system simplicity was created via overly complex mechanisms, the
