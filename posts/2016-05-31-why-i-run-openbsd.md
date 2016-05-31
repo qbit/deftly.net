@@ -3,7 +3,7 @@ title: Why I Run OpenBSD
 description: A story of how OpenBSD came to be my favorite OS.
 ---
 
-This post is about my journey down the OS rabbit hole, and how it
+This post is about my journey down the OS rabbit hole and how it
 landed me in OpenBSD land as a happy and productive user.
 
 It contains information that is highly opinionated, wildly
@@ -11,41 +11,41 @@ inaccurate, mostly speculation. It is, after all, on the internet!
 
 ### UPI
 
-One thing I learned during my travels between OSs is that consistency
-is everything.
+One thing I learned during my travels between OSs: consistency is
+everything.
 
 Most operating systems seem to, at least, keep a consistent interface
 between themselves and binaries / applications. They do this by keeping
-consistent APIs (Application Programmer Interfaces) and ABIs
+consistent APIs (Application Programming Interfaces) and ABIs
 (Application Binary Interfaces). If you take a binary from a really old
-version of Linux and run or build it on a bran-spanking new install of
+version of Linux and run or build it on a brand-spanking new install of
 Linux, it will likely *Just Work™*. This is great for applications
 and developers of applications. Vendors can build binaries for
 distribution and worry less about their product working when it gets
-out in the wild (Sure this binary built in 2016 will run on RedHat
+out in the wild (sure this binary built in 2016 will run on RedHat
 AS2.1!!).
 
 With all this catering to applications and developers, one would think
 that a similar level of attention would be applied to the *users* of
-the applications and systems: User Program Interface (UPI) as I like to
-call it!
+the applications and systems: User Program Interfaces (UPI) as I like to
+call them!
 
-A good example of poor UPI is (was?) `ifconfig(8)` on Linux. From a
-users perspective, `ifconfig` a command to "configure network
-interface parameters" should work on ... well... network interfaces!
-This includes wireless, hardired, cell based... etc.
+A good example of a poor UPI is (was?) `ifconfig(8)` on Linux. From a
+user's perspective, `ifconfig`, a command to "configure network
+interface parameters" should work on... well, network interfaces!
+This includes wireless, hard-wired, cell based... etc.
 
 On Linux, however, this is no longer the case (at least for some devices).
 
 This inconsistency seems to have come to be when Linux started getting
-wireless support. For some reason someone (vendors maybe?) decided that
-`ifconfig` wasn't a good place to let users interact with their
+wireless support. For some reason someone (vendors, maybe?) decided
+that `ifconfig` wasn't a good place to let users interact with their
 wireless device. Maybe they felt their device was special? Maybe there
-were technical reasons? Bottom line is, someone decided to create a new
-utility to manage a wireless device... and then another one came
+were technical reasons? The bottom line is, someone decided to create
+a new utility to manage a wireless device... and then another one came
 along... pretty soon there was `iwconfig(8)`, `iw(8)`, `ifconfig(8)`,
 some funky thing that let windows drivers interface with Linux..  and
-one called `ip(8)` I am sure there are others I am forgetting... but I
+one called `ip(8)` I am sure there are others I am forgetting, but I
 prefer to forget. I have moved onto greener pastures and the knowledge
 of these programs no longer serves me.
 
@@ -54,8 +54,8 @@ Simply configuring a wireless network on Linux became a huge hassle:
 - **User**: Which tool do I use to configure my wireless? `ifconfig`
 doesn't seem to be able to help me.
 - **Google[1]**: Well it depends on what driver you are using.
-- **User**: Intel blablablbal.
-- **Google[1] -> Intel Site**: iwconfig! The command is going too look
+- **User**: Intel blablablbla.
+- **Google[1] -> Intel Site**: `iwconfig`! The command is going to look
 very similar to `ifconfig` but don't let that fool you! It's very
 different and only works with one very specific type of wireless
 device!
@@ -68,10 +68,11 @@ Your UPI sucks.
 ### The Double Drill Set
 
 All of this inconsistency with the wireless stuff left me with a
-dirty, uneasay feeling. Where else is this disregard manifesting? Is
-there no process that looks at tooling and says: "Wait, these tools do
-very similar things from a users perspective.. lets not clutter the
-environment with more tools that do _almost_ the same thing..".
+dirty, uneasay feeling. Where else is this disregard for users
+manifesting? Is there no process that looks at tooling and says:
+"Wait, these tools do very similar things from a users
+perspective. Let's not clutter the environment with more tools that do
+_almost_ the same thing."
 
 It's like having two drills, one that drives screws in, and another
 that take them out.
@@ -103,7 +104,7 @@ thing I needed, so all were candidates for adoption!
 One month, one BSD. Starting with FreeBSD, then OpenBSD, then NetBSD.
 
 Since none of the BSDs completely worked for me, I knew it would be a
-tough journey. There would be sacrafices, there would be work that
+tough journey. There would be sacrifices, there would be work that
 needed to be done.
 
 A few things were clear:
@@ -116,8 +117,8 @@ system was not for me.
 
 ### Long Story Short
 
-OpenBSD won the showdown. It was the most complete, simple and
-coherent system. The documentation was thourough, the code was easy to
+OpenBSD won the showdown. It was the most complete, simple, and
+coherent system. The documentation was thorough, the code was easy to
 follow and understand. 
 
 It had one command to configure all of the network interfaces!
@@ -141,10 +142,10 @@ Armed with ONLY OpenBSD and it's excellent documentation, I was able to
 configure an OpenBSD router doing PPPoE, NAT, DNS and DHCP. All
 without installing a single thing outside of the base OS (which, I
 might add, was installed on a 2G CF card with room to spare!) and not
-a single search engine query (no internet, remember! :P)!
+a single search engine query (no internet, remember? :P)!
 
 ### FastForward to Now
 
-OpenBSD is my main OS and the only OS I truley enjoy running. With
-every release it gains new awesome features that embody simplicity,
-security and consistency.
+OpenBSD is my main OS and the only OS I truly enjoy running. With
+every release it gains new, awesome features that embody simplicity,
+security, and consistency.
