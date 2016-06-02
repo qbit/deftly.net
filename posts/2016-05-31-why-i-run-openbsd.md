@@ -138,7 +138,7 @@ mode, and have OpenBSD doing all the PPPoE stuff. To test my metal
 (and OpenBSD's) I was going to configure everything without consulting
 the internet!
 
-Armed with ONLY OpenBSD and it's excellent documentation, I was able to
+Armed with ONLY OpenBSD and its excellent documentation, I was able to
 configure an OpenBSD router doing PPPoE, NAT, DNS and DHCP. All
 without installing a single thing outside of the base OS (which, I
 might add, was installed on a 2G CF card with room to spare!) and not
