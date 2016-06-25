@@ -43,6 +43,10 @@ div#header #navigation img {
     padding-top: 5px;
 }
 
+#navigation i {
+    color: #666;
+}
+
 div#footer {
     font-size: 12px;
     padding: 12px 0px 12px 135px;
